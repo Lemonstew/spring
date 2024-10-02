@@ -3,11 +3,13 @@ package com.example.spring.controller;
 import com.example.spring.dto.c14.Actor;
 import com.example.spring.dto.c14.Book;
 import com.example.spring.dto.c14.Member;
+import lombok.Data;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+
 
 @Controller
 @RequestMapping("main14")
