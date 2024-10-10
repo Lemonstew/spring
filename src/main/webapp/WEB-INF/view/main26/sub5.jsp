@@ -7,8 +7,8 @@
 <body>
 <h3>가격으로 상품 검색</h3>
 <form action="">
-    <input type="number" value="${param.keyword1}" step="0.01" placeholder="부터" name="keyword1">
-    <input type="number" value="${param.keyword2}" step="0.01" placeholder="까지" name="keyword2">
+    <input type="number" value="${param.from}" step="0.01" placeholder="부터" name="from">
+    <input type="number" value="${param.to}" step="0.01" placeholder="까지" name="to">
     <br>
     <button>검색</button>
 </form>

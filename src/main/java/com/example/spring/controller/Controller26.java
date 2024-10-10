@@ -168,12 +168,12 @@ public class Controller26 {
     }
 
     @GetMapping("sub5")
-    public void sub5(@RequestParam(defaultValue = "0") String keyword1,
-                     @RequestParam(defaultValue = "10000") String keyword2, Model model) throws Exception {
+    public void sub5(@RequestParam(defaultValue = "0") String from,
+                     @RequestParam(defaultValue = "10000") String to, Model model) throws Exception {
         String sql = STR."""
                 SELECT *
                 FROM Products
-                WHERE Price BETWEEN '\{keyword1}' AND '\{keyword2}'
+                WHERE Price BETWEEN '\{from}' AND '\{to}'
                 """;
 
         Connection con = dataSource.getConnection();
