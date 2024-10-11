@@ -101,7 +101,7 @@ public class Controller26 {
             List<Customer> customers = new ArrayList<>();
             while (rs.next()) {
                 Customer customer = new Customer();
-                customer.setCustomerName(rs.getString("CustomerName"));
+                customer.setName(rs.getString("CustomerName"));
                 customer.setContactName(rs.getString("ContactName"));
                 customers.add(customer);
             }
@@ -127,12 +127,12 @@ public class Controller26 {
         try (con; stmt; rs;) {
             while (rs.next()) {
                 Customer customer = new Customer();
-                customer.setCustomerId(rs.getInt("CustomerID"));
-                customer.setCustomerName(rs.getString("CustomerName"));
+                customer.setId(rs.getString("CustomerID"));
+                customer.setName(rs.getString("CustomerName"));
                 customer.setContactName(rs.getString("ContactName"));
                 customer.setAddress(rs.getString("Address"));
                 customer.setCity(rs.getString("City"));
-                customer.setPostalCode(rs.getString("PostalCode"));
+                customer.setCode(rs.getString("PostalCode"));
                 customer.setCountry(rs.getString("Country"));
                 customers.add(customer);
             }

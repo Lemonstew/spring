@@ -39,9 +39,9 @@ public class Controller27 {
             List<Customer> list = new ArrayList<>();
             while (rs.next()) {
                 Customer customer = new Customer();
-                customer.setCustomerId(rs.getInt("CustomerID"));
-                customer.setPostalCode(rs.getString("PostalCode"));
-                customer.setCustomerName(rs.getString("CustomerName"));
+                customer.setId(rs.getString("CustomerID"));
+                customer.setCode(rs.getString("PostalCode"));
+                customer.setName(rs.getString("CustomerName"));
                 customer.setContactName(rs.getString("ContactName"));
                 customer.setAddress(rs.getString("Address"));
                 customer.setCity(rs.getString("City"));
@@ -72,9 +72,9 @@ public class Controller27 {
             List<Customer> list = new ArrayList<>();
             while (rs.next()) {
                 Customer customer = new Customer();
-                customer.setCustomerId(rs.getInt("CustomerID"));
-                customer.setPostalCode(rs.getString("PostalCode"));
-                customer.setCustomerName(rs.getString("CustomerName"));
+                customer.setId(rs.getString("CustomerID"));
+                customer.setCode(rs.getString("PostalCode"));
+                customer.setName(rs.getString("CustomerName"));
                 customer.setContactName(rs.getString("ContactName"));
                 customer.setAddress(rs.getString("Address"));
                 customer.setCity(rs.getString("City"));
@@ -193,13 +193,13 @@ public class Controller27 {
             List<Customer> list = new ArrayList<>();
             while (rs.next()) {
                 Customer customer = new Customer();
-                customer.setCustomerId(rs.getInt("CustomerID"));
-                customer.setCustomerName(rs.getString("CustomerName"));
+                customer.setId(rs.getString("CustomerID"));
+                customer.setName(rs.getString("CustomerName"));
                 customer.setContactName(rs.getString("ContactName"));
                 customer.setAddress(rs.getString("Address"));
                 customer.setCity(rs.getString("City"));
                 customer.setCountry(rs.getString("Country"));
-                customer.setPostalCode(rs.getString("PostalCode"));
+                customer.setCode(rs.getString("PostalCode"));
                 list.add(customer);
             }
             model.addAttribute("customerList", list);
