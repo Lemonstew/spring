@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS w3schools;
+
 CREATE DATABASE IF NOT EXISTS w3schools;
 USE w3schools;
 
