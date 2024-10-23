@@ -35,3 +35,7 @@ SELECT *
 FROM Suppliers
 WHERE ContactName = 'Matti Karttunen';
 
+INSERT INTO Customers
+    (CustomerName, ContactName, Address, City, PostalCode, Country)
+SELECT CustomerName, ContactName, Address, City, PostalCode, Country
+FROM Customers;

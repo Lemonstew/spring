@@ -26,20 +26,41 @@
     <tbody>
     <c:forEach items="${customerList}" var="customer">
         <tr>
-            <td>${customer.customerId}</td>
-            <td>${customer.customerName}</td>
+            <td>${customer.id}</td>
+            <td>${customer.name}</td>
             <td>${customer.contactName}</td>
             <td>${customer.address}</td>
             <td>${customer.city}</td>
-            <td>${customer.postalCode}</td>
+            <td>${customer.code}</td>
             <td>${customer.country}</td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
-
 <div style="margin: 10px;">
-    <c:forEach begin="1" end="${lastPageNumber}" var="pageNumber">
+
+    <c:if test="${currentPageNumber > 1}">
+        <c:url value="/main27/sub5" var="pageLink">
+            <c:param name="page" value="1"/>
+        </c:url>
+        <a href="${pageLink}">&lt;&lt; 처음</a>
+    </c:if>
+
+    <c:if test="${not empty prevPageNumber}">
+        <c:url value="/main27/sub5" var="pageLink">
+            <c:param name="page" value="${prevPageNumber}"/>
+        </c:url>
+        <a href="${pageLink}">&lt; 이전</a>
+    </c:if>
+    <c:forEach begin="${beginPageNumber}" end="${endPageNumber}" var="pageNumber">
+
+        <%--
+        link
+        1페이지 : /main27/sub5?page=1
+        2페이지 : /main27/sub5?page=2
+        3페이지 : /main27/sub5?page=3
+            --%>
+
         <c:url value="/main27/sub5" var="pageLink">
             <c:param name="page" value="${pageNumber}"/>
         </c:url>
@@ -47,6 +68,19 @@
             <a href="${pageLink}">${pageNumber}</a>
         </span>
     </c:forEach>
+    <c:if test="${not empty nextPageNumber}">
+        <c:url value="/main27/sub5" var="pageLink">
+            <c:param name="page" value="${nextPageNumber}"/>
+        </c:url>
+        <a href="${pageLink}">다음 &gt;</a>
+    </c:if>
+
+    <c:if test="${currentPageNumber < lastPageNumber}">
+        <c:url value="/main27/sub5" var="pageLink">
+            <c:param name="page" value="${lastPageNumber}"/>
+        </c:url>
+        <a href="${pageLink}">맨끝 &gt;&gt;</a>
+    </c:if>
 </div>
 </body>
 </html>

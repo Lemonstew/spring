@@ -4,9 +4,9 @@ import lombok.Data;
 
 @Data
 public class Order {
-    private int orderId;
-    private int customerId;
-    private int employeeId;
+    private String orderId;
+    private String customerId;
+    private String employeeId;
     private String orderDate;
-    private int shipperId;
+    private String shipperId;
 }
