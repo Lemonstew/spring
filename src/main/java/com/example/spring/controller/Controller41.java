@@ -57,4 +57,9 @@ public class Controller41 {
     public void sub10() {
 
     }
+
+    @GetMapping("sub12")
+    public void sub12() {
+
+    }
 }
