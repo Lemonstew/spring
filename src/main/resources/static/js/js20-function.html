@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // 함수 (function) : 나중에 실행되기 위한 코드 블럭
+
+  // 함수 정의 방법 3가지
+  // 이름 있는 함수
+  // 이름 없는 함수
+  // arrow function
+
+  // 함수는 값이다.
+
+  // 이름 있는 함수
+  /*
+  function 함수명(파라미터목록) {
+    // 코드블럭
+  }
+  */
+  // 함수명 : lowerCamelCase
+
+  // 함수정의
+  function myFunction() {
+    console.log("함수 내의 코드들...")
+  }
+
+  // 함수호출 (실행)
+  //  : 함수명()
+  myFunction();
+  console.log("hi");
+  myFunction();
+
+  //
+  function myFunction2() {
+    console.log("Forest Shuffle")
+  }
+
+  myFunction2();
+
+  myFunction3();
+
+  function myFunction3() {
+    console.log("Black Forest")
+  }
+
+  // 이름 있는 함수는 나중에 정의를 해도 호출이 가능하나, 헷갈릴 수 있으니 정의부터 한다.
+
+  // 이름 없는 함수 (변수에 할당 후 실행 가능)
+  let myFunc4 = function () {
+    console.log("unknown...")
+  }
+
+  myFunc4();
+
+  // arrow function
+  let myFunc7 = () => {
+    console.log("arrow function")
+  }
+  myFunc7();
+
+  let myFunc8 = () => {
+    console.log("Robin")
+  };
+  myFunc8();
+</script>
+</body>
+</html>

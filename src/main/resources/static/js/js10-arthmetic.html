@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 산술연산자
+    // +, -, *, /, %, **
+
+    let a = 10;
+    let b = 3;
+
+    let c = a + b;
+    let d = a - b;
+    let e = a * b;
+
+    let h = a ** b // a의 b 제곱
+
+    console.log(c, d, e, h)
+
+    // Infinity
+    let i = 10 / 0;
+    console.log(i)
+
+    // -Infinity
+    let k = -10 / 0;
+    console.log(k)
+
+    // NaN (not a number)
+    let j = 10 % 0;
+    console.log(j)
+
+    // 산술연산시 타입변환이 일어남
+    //  : 연산 전 타입을 맞추기...!!!
+    let l = 3;
+    let m = "5";
+
+    console.log(l + m + l + l) // "3533" -> 스트링 연결연산이 일어남
+    console.log(l - m) // -2
+    console.log(l * m) // 15
+
+    // Number() : number 로 타입 변환
+    let n = 3;
+    let o = Number(m);
+    console.log(n + o);
+    console.log(n - o);
+</script>
+</body>
+</html>
