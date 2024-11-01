@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box1">
+    <ul>
+        <li>Lorem.</li>
+        <li>Quae!</li>
+        <li>Cumque!</li>
+    </ul>
+</div>
+<div id="box2">
+    <ul>
+        <li>Lorem.</li>
+        <li>Ipsa!</li>
+        <li>Ducimus?</li>
+    </ul>
+</div>
+
+<script>
+  let a = document.querySelector("ul")
+  // document.querySelector("ul: nth-child(2))  => 두번째 ul
+
+  // append (마지막 자식
+  // prepend (첫번째 자식
+  // after (동생
+  // before (형
+
+  let b = document.createElement("p")
+  b.innerText = "p element"
+  let c = document.createElement("li")
+  c.innerText = "li element 1"
+  let d = document.createElement("h1")
+  d.innerText = "h1 element"
+  let e = document.createElement("li")
+  e.innerText = "li element 2"
+
+  a.append(c)
+
+  a.parentElement.parentElement.children[1].children[0].prepend("Lorenzo")
+  a.after(b)
+  a.before(b)
+
+  let x = document.querySelector("#box2")
+  // let x = document.querySelector("#box2 > ul")
+
+
+  let y = document.createElement("h2")
+  y.innerText = "hello"
+  x.prepend(y)
+  let i = document.createElement("li")
+  i.innerText = "hi"
+  x.children[0].prepend(i)
+  //    결과가 왜이러지?
+
+
+</script>
+</body>
+</html>

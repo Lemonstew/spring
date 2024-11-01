@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = {name: "son", age: 33};
+  console.log(a.name)
+  console.log(a.age)
+
+  console.log(a.city) // undefined (값이 없으므로)
+
+  // 속성값 변경
+  a.name = "lee";
+  console.log(a.name)
+  a.age = 55;
+  console.log(a.age)
+
+  // 속성값 추가
+  a.city = "seoul"
+  console.log(a.city)
+
+  let b = {
+    score: 88,
+    city: 'london'
+  };
+
+  b.score = 99
+  b.city = 'paris'
+  b.country = 'france'
+
+  console.log(b.score)
+  console.log(b.city)
+  console.log(b.country)
+
+  let c = {
+    info: "정보",
+    descript: function () {
+      console.log("정보 출력...")
+    }
+  };
+
+  console.log(c.info);
+  c.descript();
+  
+</script>
+</body>
+</html>
