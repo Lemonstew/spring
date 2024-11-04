@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input1" type="text">
+<button id="btn1">
+    +
+</button>
+
+<div>
+    <ul id="list1"></ul>
+</div>
+<div>
+    <button id="btn2">
+        -
+    </button>
+</div>
+<script>
+  let a = document.querySelector("#input1")
+  a.addEventListener("keyup", function () {
+    console.log("입력 중...")
+    let b = document.querySelector("#input1")
+    console.log(b.value)
+
+  })
+</script>
+</body>
+</html>
