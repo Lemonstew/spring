@@ -6,30 +6,32 @@
 </head>
 <body>
 
-<a href="" id="1"><p>Lorem.</p></a>
-<a href="" id="2"><p>Cupiditate.</p></a>
-<a href="" id="3"><p>Enim?</p></a>
-<a href="" id="4"><p>Quod!</p></a>
-<a href="" id="5"><p>Dolor.</p></a>
+<p>Lorem.</p>
+<p>Cupiditate.</p>
+<p>Enim?</p>
+<p>Quod!</p>
+<p>Dolor.</p>
 
 
 <input type="text" readonly>
 
 <script>
 
-  let a = document.querySelector("#1");
+  let a = document.querySelectorAll('p')
+  console.log(a);
 
-  a.onclick = function () {
+  document.querySelectorAll('p')
+    // 모든 p 태그 요소를 반환할거야. NodeList형태로.
+    .forEach(e => {
+      // 요소 하나하나 뽑아낼거야
+      e.addEventListener('click', () => {
+        // 각 요소 클릭하면 이런 일이 일어날거야
+        document.querySelector('input').value = e.innerText
+        // input 태그 요소의 value 는 아까 뽑힌 요소의 html 안에 있는 거야.
+      })
+    })
 
-  }
 
-
-  // document.querySelectorAll("p")
-  //   .forEach((elem) => {
-  //     elem.addEventListener("click", () => {
-  //       document.querySelector("input").value = elem.innerHTML;
-  //     })
-  //   })
 </script>
 </script>
 </body>
