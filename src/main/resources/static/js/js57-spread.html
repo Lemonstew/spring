@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // spread (...)
+  const a = [3, 1, 4];
+  let b = [...a];
+  const c = [...a, 1];
+
+  console.log(c);
+  const d = [3, ...c, 6];
+  console.log(d);
+
+  d.sort();
+  console.log(d);
+
+  b = [...b, 3];
+  console.log(b);
+  console.log(a);
+
+  const f = [...c, ...d, ...b];
+  console.log(f);
+  f.sort();
+  console.log(f);
+
+  const j = [9, 10, 11];
+  const k = ["d", "e", "f"];
+  const l = [...j, ...k];
+  l.pop();
+  console.log(l);
+  l.push("f");
+  console.log(l);
+</script>
+</body>
+</html>

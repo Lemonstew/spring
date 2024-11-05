@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // object
+  // {prop: "value", prop1: "value2"}
+  // array
+  // [e1, e2, e3]
+
+  // 배열 복사
+  const a = [3, 4, 5];
+  const b = a; // 참조값 복사
+  console.log(a);
+  console.log(b);
+  b[2] = 55;
+  console.log(a);
+  console.log(b);
+
+  // for 문 사용해서 복사 (element 복사)
+  const c = [];
+  for (let i = 0; i < a.length; i++) {
+    c.push(a[i]);
+  }
+  console.log(a);
+  console.log(c);
+  c[2] = 555;
+  console.log(a);
+  console.log(c);
+
+  // map 메소드 사용
+  const d = a.map(e => e);
+  console.log(a);
+  console.log(d);
+  d[2] = 5555;
+  console.log(a);
+  console.log(d);
+
+  // slice 메소드 사용
+  const e = a.slice(0, a.length);
+  console.log(a);
+  console.log(e);
+  e[2] = 77;
+  console.log(a);
+  console.log(e);
+
+  console.log("###############################")
+  // ... : spread 연산자
+  const f = [...a];
+  console.log(a);
+  console.log(f);
+  f[2] = 88;
+  console.log(a);
+  console.log(f);
+
+  console.log("================================")
+  // ... 사용 시 얕은 복사 일어남
+  const g = [[3, 4], [9, 10]];
+  const h = [...g];
+  console.log(g);
+  console.log(h);
+  g[1][0] = 99;
+  console.log(g);
+  console.log(h);
+  g[1] = 1;
+  console.log(g);
+  console.log(h);
+
+  // 깊은 복사
+
+  // 연습
+  const j = ["son", "han", "rose"];
+
+
+</script>
+</body>
+</html>

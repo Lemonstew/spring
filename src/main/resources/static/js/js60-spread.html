@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  function fun1(a, b, c) {
+    console.log(a, b, c);
+  }
+
+  // fun은 3개의 개수를 맞출거다~ 이말이야
+  // 그래서 개수가 부족할 시에는 undefined로,
+  // 개수가 넘칠 때는 알아서 짜르고 그런다.
+
+  fun1(3, 4, 5);
+  fun1(5, 6);
+  fun1(10, 20, 30, 40);
+
+  const a = [3, 1, 4];
+  fun1(a);
+  fun1(a, a, a);
+  fun1(a[0], a[1], a[2]);
+
+  fun1(...a);
+
+  const b = ["han", "rose", "bruno", "son"];
+  fun1(...b);
+
+  const c = ["faker"];
+  fun1(...c);
+  fun1("faker");
+
+</script>
+</body>
+</html>
