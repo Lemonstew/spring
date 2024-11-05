@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // Destructuring assignment
+
+  const a = {name: "Brass", country: "England"};
+  const b = a.name;
+  const c = a.country;
+
+  console.log(b, c);
+
+  const {name: x, country: y} = a;
+  console.log(x, y);
+
+  // 연습
+  const d = {age: 44, song: "apt"};
+
+  const {age: s, song: t} = d;
+
+  console.log(s, t);
+  console.log(t);
+
+  const {age, song} = d;
+  // const age = d.age, const song = d.song 이 코드와 같대 위의 한줄 코드가~~
+  console.log(age, song);
+
+  const e = {address: "london", email: "gmail"};
+  const {address, email, info} = e;
+  console.log(address, email, info);
+
+  // 없으면 기본값 할당
+  const f = {desc: "hi", greeting: "hello"};
+  const {desc, greeting = "morning", weight = 99} = f;
+  // 있으면 기본값, 없으면 아무 상관 없음
+  console.log(desc, greeting, weight);
+
+  // 연습
+  const g = {height: 200, depth: 7, nick: "son"};
+
+  const {height, depth, nick, password = 1234} = g;
+  console.log(height, depth, nick, password);
+
+</script>
+</body>
+</html>
